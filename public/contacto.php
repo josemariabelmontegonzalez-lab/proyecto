@@ -19,8 +19,6 @@
 
     <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
         <main class="lg:col-span-8">
-            <h1 class="playful-font text-4xl text-emerald-900 mb-4">Contenido principal</h1>
-            <p class="text-gray-600">Aquí iría el contenido de la página.</p>
 
             <?php
 
