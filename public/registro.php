@@ -116,7 +116,7 @@
             transform: translateX(-50%);
             height: var(--size);
             width: calc(var(--size) * 1.13);
-            animation: asomar 1.5s ease-out forwards;
+            animation: asomar 2.5s ease-out forwards;
         }
 
         @keyframes asomar {
