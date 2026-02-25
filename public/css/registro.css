@@ -71,7 +71,55 @@
             border-color: #ffffff;
             box-shadow: 0 0 15px 5px #29C464;
         }
+@media (max-width: 768px) {
 
+    /* Dejamos hueco arriba para los gatos superiores */
+    body {
+        display: block;
+        padding-top: 150px;
+        height: auto;
+        overflow: auto;
+    }
+
+    /* Gatos superiores */
+    body > img:first-of-type {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        max-width: 20%;
+    }
+
+    body > img:last-of-type {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        max-width: 20%;
+    }
+
+    /* Formulario */
+    form {
+        max-width: 95%;
+        width: 95%;
+        margin: auto ;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* 🐾 Gato que se asoma DESDE ABAJO */
+    :root {
+        --size: 110px;
+    }
+
+    .cat {
+        position: absolute;
+        bottom: -40px;   /* ← Se asoma desde abajo */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;      /* Por encima del formulario */
+    }
+}
+
+        
         button {
             width: 100%;
             background-color: #06594d;
@@ -302,3 +350,5 @@
         .cat.cover-eyes .paw--right {
             transform: translateY(-40px) translateX(-20px) rotate(-60deg);
         }
+
+        
