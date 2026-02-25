@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Formulario con estilo neón</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="css/registro.css">
 </head>
 
 <body>
 
-    <img src="gato1.png" alt="gato 1">
+    <img src="media/registro/gato1.png" alt="gato 1">
 
     <form action="procesar_registro.php" method="POST">
         <h2>Registro de Usuario</h2>
@@ -31,7 +31,7 @@
         <button type="submit">Registrarse</button>
     </form>
 
-    <img src="gato2.png" alt="gato 2">
+    <img src="media/registro/gato2.png" alt="gato 2">
 
     <div class="cat">
         <div class="ear ear--left"></div>
@@ -49,7 +49,7 @@
 
         </div>
     </div>
-    <script src="registro.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 
 </html>
