@@ -4,8 +4,9 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-4 mb-4 md:mb-0">
                     <div
-                        class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <span class="text-teal-800 playful-font text-xl font-bold">UG</span>
+                         class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-lg">
+                       <!--<span class="text-teal-800 playful-font text-xl font-bold">UG</span>  --> 
+                        <img src="/public/media/logo/logo_3.png" class="logo_">
                     </div>
                     <h1 class="text-2xl md:text-3xl playful-font font-bold tracking-tight">Uníon Gatuna</h1>
                 </div>
