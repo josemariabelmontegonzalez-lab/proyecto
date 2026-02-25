@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Formulario con estilo neón</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         html,
         body {
@@ -25,7 +25,6 @@
             overflow: hidden;
         }
 
-        /* Ajuste de tamaño de imágenes */
         img {
             max-width: 30%;
             height: auto;
@@ -100,8 +99,6 @@
             color: #06594d;
         }
 
-        /* ------------------ GATO ASOMÁNDOSE ------------------ */
-
         :root {
             --black: #161616;
             --white: #fff;
@@ -111,7 +108,6 @@
         .cat {
             position: absolute;
             bottom: -60px;
-            /* se asoma desde abajo */
             left: 50%;
             transform: translateX(-50%);
             height: var(--size);
@@ -136,7 +132,6 @@
             width: 25%;
             background: var(--white);
             border: 3px solid black;
-            /* ← BORDE NEGRO AÑADIDO */
             border-radius: 50%;
         }
 
@@ -282,6 +277,40 @@
             transform: translateX(-50%);
             border-radius: 50% / 30% 30% 70% 70%;
         }
+
+        .paw {
+            position: absolute;
+            bottom: -5%;
+            height: 35%;
+            width: 30%;
+            background: var(--white);
+            border: 3px solid black;
+            border-radius: 50%;
+            transition: transform 1s ease;
+            z-index: 10;
+        }
+
+        .paw--left {
+            left: -5%;
+            transform: rotate(20deg);
+        }
+
+        .paw--right {
+            right: -5%;
+            transform: rotate(-20deg);
+        }
+
+        .cat.cover-eyes .eye::after {
+            height: 100% !important;
+        }
+
+        .cat.cover-eyes .paw--left {
+            transform: translateY(-40px) translateX(20px) rotate(60deg);
+        }
+
+        .cat.cover-eyes .paw--right {
+            transform: translateY(-40px) translateX(-20px) rotate(-60deg);
+        }
     </style>
 </head>
 
@@ -289,7 +318,7 @@
 
     <img src="gato1.png" alt="gato 1">
 
-    <form>
+    <form action="procesar_registro.php" method="POST">
         <h2>Registro de Usuario</h2>
 
         <div class="input-container">
@@ -309,7 +338,6 @@
 
     <img src="gato2.png" alt="gato 2">
 
-    <!-- GATO ASOMÁNDOSE -->
     <div class="cat">
         <div class="ear ear--left"></div>
         <div class="ear ear--right"></div>
@@ -321,6 +349,9 @@
                 <div class="eye-pupil"></div>
             </div>
             <div class="muzzle"></div>
+            <div class="paw paw--left"></div>
+            <div class="paw paw--right"></div>
+
         </div>
     </div>
 
@@ -341,6 +372,15 @@
 
                 pupil.style.transform = `translate(${x}px, ${y}px)`;
             });
+        });
+
+        const passwordInput = document.querySelector('input[name="password"]');
+        const cat = document.querySelector('.cat');
+        passwordInput.addEventListener('focus', () => {
+            cat.classList.add('cover-eyes');
+        });
+        passwordInput.addEventListener('blur', () => {
+            cat.classList.remove('cover-eyes');
         });
     </script>
 
