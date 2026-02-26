@@ -1,6 +1,13 @@
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+    position: relative;
+    background-image:
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 24 24' fill='%23ffffff' opacity='0.05' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 13c2.5 0 4 1.5 4 3.5S14.5 20 12 20s-4-1.5-4-3.5S9.5 13 12 13zm-5-5a2 2 0 110 4 2 2 0 010-4zm10 0a2 2 0 110 4 2 2 0 010-4zm-7-3a2 2 0 110 4 2 2 0 010-4zm4 0a2 2 0 110 4 2 2 0 010-4z'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 24 24' fill='%23ffffff' opacity='0.03' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 13c2.5 0 4 1.5 4 3.5S14.5 20 12 20s-4-1.5-4-3.5S9.5 13 12 13zm-5-5a2 2 0 110 4 2 2 0 010-4zm10 0a2 2 0 110 4 2 2 0 010-4zm-7-3a2 2 0 110 4 2 2 0 010-4zm4 0a2 2 0 110 4 2 2 0 010-4z'/%3E%3C/svg%3E");
+    background-repeat: repeat, repeat;
+    background-size: 80px 80px, 60px 60px;
+
 }
 
 .playful-font {
@@ -74,7 +81,8 @@ body {
     box-shadow: 0 12px 15px rgba(0, 0, 0, .24), 0 17px 50px rgba(0, 0, 0, .19);
 }
 
-.login-html,.login-wrap {
+.login-html,
+.login-wrap {
     border-radius: 16px;
     outline-offset: 8px;
 }
@@ -165,7 +173,8 @@ body {
     background: rgba(255, 255, 255, .2);
 }
 
-.foot-lnk >a , .foot-lnk >label{
+.foot-lnk>a,
+.foot-lnk>label {
     color: #fff;
 }
 
@@ -214,12 +223,13 @@ body {
 }
 
 /* Cuando el input está enfocado o tiene texto */
-.login-scope .input-wrap .input:focus + label,
-.login-scope .input-wrap .input:not(:placeholder-shown) + label {
+.login-scope .input-wrap .input:focus+label,
+.login-scope .input-wrap .input:not(:placeholder-shown)+label {
     top: -10px;
     left: 15px;
     font-size: 12px;
-    color: #ffffff; /* color del label al enfocar */
+    color: #ffffff;
+    /* color del label al enfocar */
 }
 
 /* Subrayado al enfocar */

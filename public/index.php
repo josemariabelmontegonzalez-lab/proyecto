@@ -90,6 +90,101 @@
         </div>
     </section>
 
+
+
+    <section class="relative py-24 bg-gradient-to-br from-teal-800 via-teal-700 to-emerald-700 text-white overflow-hidden">
+        <div class="relative z-10 container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Texto -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl playful-font font-bold mb-6 leading-tight">
+                        Tu ayuda cambia vidas
+                    </h2>
+
+                    <p class="text-lg md:text-xl text-teal-100 mb-10 leading-relaxed max-w-xl">
+                        Cada donación nos permite rescatar, alimentar y ofrecer atención veterinaria
+                        a nuestros gatos. Gracias a personas solidarias podemos darles una segunda oportunidad real.
+                    </p>
+
+                    <div class="flex flex-wrap gap-6">
+                        <button class="bg-amber-400 hover:bg-amber-500 text-teal-900 px-10 py-4 rounded-full font-semibold shadow-2xl transition-all duration-300 transform hover:scale-105">
+                            Donar ahora
+                        </button>
+
+                        <button class="border-2 border-white/70 hover:bg-white hover:text-teal-800 px-10 py-4 rounded-full font-semibold transition-all duration-300">
+                            Saber más
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                    <!-- Rescatados -->
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-white/20 hover:scale-105 transition">
+                        <div class="w-12 h-12 mb-6 text-amber-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-2">+80</h3>
+                        <p class="text-teal-100">Gatos rescatados</p>
+                    </div>
+
+                    <!-- Veterinaria -->
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-white/20 hover:scale-105 transition">
+                        <div class="w-12 h-12 mb-6 text-amber-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-2">100%</h3>
+                        <p class="text-teal-100">Atención veterinaria</p>
+                    </div>
+
+                    <!-- Refugio -->
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-white/20 hover:scale-105 transition">
+                        <div class="w-12 h-12 mb-6 text-amber-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 10l9-7 9 7v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V10z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-2">24/7</h3>
+                        <p class="text-teal-100">Refugio y cuidados</p>
+                    </div>
+
+                    <!-- Donantes -->
+                    <div class="bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-xl border border-white/20 hover:scale-105 transition">
+                        <div class="w-12 h-12 mb-6 text-amber-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="w-12 h-12">
+                                <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" />
+                            </svg>
+
+                        </div>
+                        <h3 class="text-3xl font-bold mb-2">Gracias</h3>
+                        <p class="text-teal-100">A cada donante</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Upcoming Events -->
     <section class="py-20 bg-teal-50">
         <div class="container mx-auto px-4">
@@ -183,7 +278,7 @@
     </section>
 
     <!-- Newsletter -->
-  <!--   <section class="py-20 bg-amber-50">
+    <!--   <section class="py-20 bg-amber-50">
         <div class="container mx-auto px-4 text-center">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-4xl playful-font font-bold mb-6 text-teal-700">Mantente conectado con nosotros</h2>
