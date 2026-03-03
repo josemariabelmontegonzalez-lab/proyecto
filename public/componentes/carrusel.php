@@ -1,4 +1,4 @@
-<section class="hero-bg text-white relative overflow-hidden min-h-[48rem]">
+<section class="hero-bg text-white relative overflow-hidden min-h-[35rem]">
   <!-- Carrusel de fondos -->
   <div class="absolute inset-0 z-0 flex flex-col overflow-hidden">
     <div class="banner-row h-40 md:h-52 lg:h-64">
