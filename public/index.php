@@ -7,6 +7,80 @@
     <title>Inicio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* =========================
+   ANIMACIONES DEL CARRUSEL
+========================= */
+        @keyframes scrollLeft {
+            0% {
+                transform: translate(0);
+            }
+
+            100% {
+                transform: translate(-50%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translate(-50%);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        /* =========================
+   FILAS DEL CARRUSEL
+========================= */
+        .banner-row {
+            height: 10rem;
+            /* altura base, se puede ajustar con Tailwind para responsive */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-scroll {
+            height: 100%;
+            width: 7200px;
+            /* ancho suficiente para repetir fondo */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cada fila animada con fondo y dirección distinta */
+        .row-first {
+            animation: scrollLeft 840s linear infinite;
+            background: url(media/banner/Untitled_design.webp) 0 0/25% 100% repeat-x;
+        }
+
+        .row-second {
+            animation: scrollRight 720s linear infinite;
+            background: url(media/banner/Untitled_design_2.webp) 0 0/25% 100% repeat-x;
+        }
+
+        .row-third {
+            animation: scrollLeft 600s linear infinite;
+            background: url(media/banner/Untitled_design_3.webp) 0 0/25% 100% repeat-x;
+        }
+
+        .row-fourth {
+            animation: scrollRight 480s linear infinite;
+            background: url(media/banner/Untitled_design_4.webp) 0 0/25% 100% repeat-x;
+        }
+
+        /* =========================
+   OVERLAY DEL CARRUSEL
+========================= */
+        .hero-bg .overlay-carrusel {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 0;
+        }
+    </style>
 </head>
 
 <body class="bg-neutral-50 text-neutral-800">
@@ -18,22 +92,7 @@
     ?>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-white py-20 md:py-28">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl md:text-6xl playful-font font-bold mb-6 leading-tight animate-fade-in">Bienvenido a la Unión Gatuna, refugio dedicado a los gatos.</h2>
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed opacity-95">Descubre nuestra historia, como trabajamos y nuestros pequeños amigos felinos.</p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <button
-                    class="bg-amber-400 hover:bg-amber-500 text-teal-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    <i class="fas fa-search mr-2"></i>Conoce a Nuestros Gatos.
-                </button>
-                <button
-                    class="bg-white hover:bg-neutral-100 text-teal-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    <i class="fas fa-user-plus mr-2"></i>Suscribete aquí.
-                </button>
-            </div>
-        </div>
-    </section>
+    <?php require_once __DIR__ . "/componentes/prueba_carrosel.php"; ?>
 
     <!-- Features Section -->
     <section class="py-20 bg-white">
