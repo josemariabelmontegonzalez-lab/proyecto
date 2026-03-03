@@ -8,78 +8,58 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/index.css">
     <style>
-        /* =========================
+       /* =========================
    ANIMACIONES DEL CARRUSEL
 ========================= */
-        @keyframes scrollLeft {
-            0% {
-                transform: translate(0);
-            }
+@keyframes scrollLeft {
+    0% { transform: translate(0); }
+    100% { transform: translate(-50%); }
+}
 
-            100% {
-                transform: translate(-50%);
-            }
-        }
+@keyframes scrollRight {
+    0% { transform: translate(-50%); }
+    100% { transform: translate(0); }
+}
 
-        @keyframes scrollRight {
-            0% {
-                transform: translate(-50%);
-            }
-
-            100% {
-                transform: translate(0);
-            }
-        }
-
-        /* =========================
+/* =========================
    FILAS DEL CARRUSEL
 ========================= */
-        .banner-row {
-            height: 10rem;
-            /* altura base, se puede ajustar con Tailwind para responsive */
-            overflow: hidden;
-            position: relative;
-        }
+.banner-row {
+    overflow: hidden;
+    position: relative;
+}
 
-        .banner-scroll {
-            height: 100%;
-            width: 7200px;
-            /* ancho suficiente para repetir fondo */
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+.banner-scroll {
+    height: 100%;
+    width: 7200px; /* ancho suficiente para repetir fondo */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Cada fila animada con fondo y dirección distinta */
-        .row-first {
-            animation: scrollLeft 840s linear infinite;
-            background: url(media/banner/Untitled_design.webp) 0 0/25% 100% repeat-x;
-        }
+/* Animaciones y fondos específicos de cada fila */
+.row-first {
+    animation: scrollLeft 840s linear infinite;
+    background: url(media/banner/banner_1.webp) 0 0/25% 100% repeat-x;
+}
 
-        .row-second {
-            animation: scrollRight 720s linear infinite;
-            background: url(media/banner/Untitled_design_2.webp) 0 0/25% 100% repeat-x;
-        }
+.row-second {
+    animation: scrollRight 720s linear infinite;
+    background: url(media/banner/banner_2.webp) 0 0/25% 100% repeat-x;
+}
 
-        .row-third {
-            animation: scrollLeft 600s linear infinite;
-            background: url(media/banner/Untitled_design_3.webp) 0 0/25% 100% repeat-x;
-        }
+.row-third {
+    animation: scrollLeft 600s linear infinite;
+    background: url(media/banner/banner_3.webp) 0 0/25% 100% repeat-x;
+}
 
-        .row-fourth {
-            animation: scrollRight 480s linear infinite;
-            background: url(media/banner/Untitled_design_4.webp) 0 0/25% 100% repeat-x;
-        }
-
-        /* =========================
-   OVERLAY DEL CARRUSEL
-========================= */
-        .hero-bg .overlay-carrusel {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
-            z-index: 0;
-        }
+/* Overlay opcional */
+.hero-bg .overlay-carrusel {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 0;
+}
     </style>
 </head>
 
@@ -92,7 +72,7 @@
     ?>
 
     <!-- Hero Section -->
-    <?php require_once __DIR__ . "/componentes/prueba_carrosel.php"; ?>
+    <?php require_once __DIR__ . "/componentes/carrusel.php"; ?>
 
     <!-- Features Section -->
     <section class="py-20 bg-white">
