@@ -8,58 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/index.css">
     <style>
-       /* =========================
-   ANIMACIONES DEL CARRUSEL
-========================= */
-@keyframes scrollLeft {
-    0% { transform: translate(0); }
-    100% { transform: translate(-50%); }
-}
 
-@keyframes scrollRight {
-    0% { transform: translate(-50%); }
-    100% { transform: translate(0); }
-}
-
-/* =========================
-   FILAS DEL CARRUSEL
-========================= */
-.banner-row {
-    overflow: hidden;
-    position: relative;
-}
-
-.banner-scroll {
-    height: 100%;
-    width: 7200px; /* ancho suficiente para repetir fondo */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Animaciones y fondos específicos de cada fila */
-.row-first {
-    animation: scrollLeft 840s linear infinite;
-    background: url(media/banner/banner_1.webp) 0 0/25% 100% repeat-x;
-}
-
-.row-second {
-    animation: scrollRight 720s linear infinite;
-    background: url(media/banner/banner_2.webp) 0 0/25% 100% repeat-x;
-}
-
-.row-third {
-    animation: scrollLeft 600s linear infinite;
-    background: url(media/banner/banner_3.webp) 0 0/25% 100% repeat-x;
-}
-
-/* Overlay opcional */
-.hero-bg .overlay-carrusel {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
-    z-index: 0;
-}
     </style>
 </head>
 
