@@ -7,12 +7,40 @@
     <title>Inicio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="css/index.css">
-    <style>
 
+    <script>
+        if (sessionStorage.getItem('loaderShown')) {
+            document.documentElement.style.visibility = 'hidden';
+            setTimeout(() => {
+                document.documentElement.style.visibility = '';
+            }, 50);
+        }
+    </script>
+
+    <style>
+        body {
+            background: #f0faf8;
+        }
+
+        #loader-overlay {
+            position: fixed;
+            inset: 0;
+            background: #f0faf8;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
 <body class="bg-neutral-50 text-neutral-800">
+
+    <?php
+
+    require_once __DIR__ . "/componentes/loader.php";
+
+    ?>
 
     <?php
 
@@ -174,85 +202,85 @@
 
 
     <!-- Upcoming Events -->
-<section class="py-20 bg-teal-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl playful-font font-bold text-center mb-16 text-teal-700">Futuros Eventos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="py-20 bg-teal-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl playful-font font-bold text-center mb-16 text-teal-700">Futuros Eventos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- Event 1 -->
-            <div class="event-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <div class="h-48 overflow-hidden flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1745816698779-4b43418cf432?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MDcxMzN8MHwxfHNlYXJjaHwxfHx2aWN0b3JpYW4lMjB0ZWElMjBwYXJ0eSUyMGVsZWdhbnQlMjBzZXR0aW5nfGVufDB8MHx8fDE3NTk3NjY1NDR8MA&ixlib=rb-4.1.0&q=80&w=400&utm_source=TailFlux&photo_id=jKHqXRUiPj8"
-                        alt="Victorian Tea Party"
-                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                </div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
-                            <i class="fas fa-calendar-alt mr-2"></i>15 de Junio
-                        </span>
-                        <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Limitado</span>
+                <!-- Event 1 -->
+                <div class="event-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1745816698779-4b43418cf432?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MDcxMzN8MHwxfHNlYXJjaHwxfHx2aWN0b3JpYW4lMjB0ZWElMjBwYXJ0eSUyMGVsZWdhbnQlMjBzZXR0aW5nfGVufDB8MHx8fDE3NTk3NjY1NDR8MA&ixlib=rb-4.1.0&q=80&w=400&utm_source=TailFlux&photo_id=jKHqXRUiPj8"
+                            alt="Victorian Tea Party"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <h3 class="text-xl playful-font font-semibold mb-3 text-teal-700">Visita a la sala de gatos</h3>
-                    <p class="text-neutral-600 mb-4 leading-relaxed flex-1">Adentrate en nuestras instalaciones y conoce a nuestros gatos en el refugio.</p>
-                    <button class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 mt-auto">
-                        <i class="fas fa-info-circle mr-2"></i>Más detalles.
-                    </button>
-                </div>
-            </div>
-
-            <!-- Event 2 -->
-            <div class="event-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <div class="h-48 overflow-hidden flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1759150584482-6eaa3a23dab1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MDcxMzN8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwd2Fsa2luZyUyMHRvdXIlMjBhcmNoaXRlY3R1cmV8ZW58MHwwfHx8MTc1OTc2NjU0OXww&ixlib=rb-4.1.0&q=80&w=400&utm_source=TailFlux&photo_id=0S8ErFIxqVY"
-                        alt="Historical Walking Tour"
-                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                </div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
-                            <i class="fas fa-calendar-alt mr-2"></i>22 de Junio.
-                        </span>
-                        <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Evento Gratuito</span>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i>15 de Junio
+                            </span>
+                            <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Limitado</span>
+                        </div>
+                        <h3 class="text-xl playful-font font-semibold mb-3 text-teal-700">Visita a la sala de gatos</h3>
+                        <p class="text-neutral-600 mb-4 leading-relaxed flex-1">Adentrate en nuestras instalaciones y conoce a nuestros gatos en el refugio.</p>
+                        <button class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 mt-auto">
+                            <i class="fas fa-info-circle mr-2"></i>Más detalles.
+                        </button>
                     </div>
-                    <h3 class="text-xl playful-font font-semibold mb-3 text-teal-700">Tour Completo por la Reserva</h3>
-                    <p class="text-neutral-600 mb-4 leading-relaxed flex-1">Accede a un Tour completo por la reserva con ayuda de nuestros ayudantes, que ofrecerán información y una guía completa por nuestras instalaciones.</p>
-                    <button class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 mt-auto">
-                        <i class="fas fa-info-circle mr-2"></i>Más detalles
-                    </button>
                 </div>
-            </div>
 
-            <!-- Event 3 -->
-            <div class="event-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <div class="h-48 overflow-hidden flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1758797851668-bb40a878113d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MDcxMzN8MHwxfHNlYXJjaHwxfHxhbnRpcXVlJTIwYXBwcmFpc2FsJTIwdmludGFnZSUyMGl0ZW1zfGVufDB8MHx8fDE3NTk3NjY1NTJ8MA&ixlib=rb-4.1.0&q=80&w=400&utm_source=TailFlux&photo_id=F19gCY-G3Hw"
-                        alt="Antique Appraisal"
-                        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                </div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
-                            <i class="fas fa-calendar-alt mr-2"></i> 8 de Agosto
-                        </span>
-                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Evento Especial Limitado</span>
+                <!-- Event 2 -->
+                <div class="event-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1759150584482-6eaa3a23dab1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MDcxMzN8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwd2Fsa2luZyUyMHRvdXIlMjBhcmNoaXRlY3R1cmV8ZW58MHwwfHx8MTc1OTc2NjU0OXww&ixlib=rb-4.1.0&q=80&w=400&utm_source=TailFlux&photo_id=0S8ErFIxqVY"
+                            alt="Historical Walking Tour"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     </div>
-                    <h3 class="text-xl playful-font font-semibold mb-3 text-teal-700">Visita especial voluntaria</h3>
-                    <p class="text-neutral-600 mb-4 leading-relaxed flex-1">Reserva tu plaza y visita nuestra reserva principal, conoce a nuestro personal, y a nuestros gatitos, y además ofrecemos plazas para voluntarios.</p>
-                    <button class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 mt-auto">
-                        <i class="fas fa-info-circle mr-2"></i>Más detalles
-                    </button>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i>22 de Junio.
+                            </span>
+                            <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Evento Gratuito</span>
+                        </div>
+                        <h3 class="text-xl playful-font font-semibold mb-3 text-teal-700">Tour Completo por la Reserva</h3>
+                        <p class="text-neutral-600 mb-4 leading-relaxed flex-1">Accede a un Tour completo por la reserva con ayuda de nuestros ayudantes, que ofrecerán información y una guía completa por nuestras instalaciones.</p>
+                        <button class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 mt-auto">
+                            <i class="fas fa-info-circle mr-2"></i>Más detalles
+                        </button>
+                    </div>
                 </div>
-            </div>
 
+                <!-- Event 3 -->
+                <div class="event-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1758797851668-bb40a878113d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4MDcxMzN8MHwxfHNlYXJjaHwxfHxhbnRpcXVlJTIwYXBwcmFpc2FsJTIwdmludGFnZSUyMGl0ZW1zfGVufDB8MHx8fDE3NTk3NjY1NTJ8MA&ixlib=rb-4.1.0&q=80&w=400&utm_source=TailFlux&photo_id=F19gCY-G3Hw"
+                            alt="Antique Appraisal"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
+                                <i class="fas fa-calendar-alt mr-2"></i> 8 de Agosto
+                            </span>
+                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Evento Especial Limitado</span>
+                        </div>
+                        <h3 class="text-xl playful-font font-semibold mb-3 text-teal-700">Visita especial voluntaria</h3>
+                        <p class="text-neutral-600 mb-4 leading-relaxed flex-1">Reserva tu plaza y visita nuestra reserva principal, conoce a nuestro personal, y a nuestros gatitos, y además ofrecemos plazas para voluntarios.</p>
+                        <button class="w-full bg-teal-600 hover:bg-teal-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 mt-auto">
+                            <i class="fas fa-info-circle mr-2"></i>Más detalles
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center mt-12">
+                <button class="bg-amber-400 hover:bg-amber-500 text-teal-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-calendar-check mr-2"></i>Ver todos los eventos
+                </button>
+            </div>
         </div>
-        <div class="text-center mt-12">
-            <button class="bg-amber-400 hover:bg-amber-500 text-teal-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <i class="fas fa-calendar-check mr-2"></i>Ver todos los eventos
-            </button>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Newsletter -->
     <!--   <section class="py-20 bg-amber-50">
@@ -278,6 +306,12 @@
     require_once __DIR__ . "/componentes/footer.php";
 
     ?>
+
+
+    <!-- ✅ Lottie primero, luego tu script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </body>
 
 </html>
