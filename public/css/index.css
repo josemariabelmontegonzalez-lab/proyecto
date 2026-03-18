@@ -34,17 +34,17 @@ body {
 /* Animaciones y fondos específicos de cada fila */
 .row-first {
     animation: scrollLeft 840s linear infinite;
-    background: url(C:\xampp\htdocs\proyecto\proyecto\public\media\banner\banner_1.webp) 0 0/25% 100% repeat-x;
+    background: url(../media/banner/banner_1.webp) 0 0/25% 100% repeat-x;
 }
 
 .row-second {
     animation: scrollRight 720s linear infinite;
-    background: url(C:\xampp\htdocs\proyecto\proyecto\public\media\banner\banner_2.webp) 0 0/25% 100% repeat-x;
+    background: url(../media/banner/banner_2.webp) 0 0/25% 100% repeat-x;
 }
 
 .row-third {
     animation: scrollLeft 600s linear infinite;
-    background: url(C:\xampp\htdocs\proyecto\proyecto\public\media\banner\banner_3.webp) 0 0/25% 100% repeat-x;
+    background: url(../media/banner/banner_3.webp) 0 0/25% 100% repeat-x;
 }
 
 /* Overlay opcional */
