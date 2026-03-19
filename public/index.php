@@ -307,8 +307,6 @@
 
     ?>
 
-
-    <!-- ✅ Lottie primero, luego tu script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script src="js/main.js"></script>
 </body>

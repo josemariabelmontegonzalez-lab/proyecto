@@ -1,113 +1,145 @@
 body {
     font-family: 'Inter', sans-serif;
 }
+
 #loader-overlay {
-  position: fixed;
-  inset: 0;
-  background: #f0faf8;  /* ✅ teal muy claro, suave */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.6s ease;
-  overflow: hidden;
+    position: fixed;
+    inset: 0;
+    background: #f0faf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+    overflow: hidden;
 }
 
 #loader-overlay.hidden {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .loader-paw {
-  position: absolute;
-  font-size: 36px;
-  opacity: 0.12;
-  pointer-events: none;
+    position: absolute;
+    font-size: 36px;
+    opacity: 0.12;
+    pointer-events: none;
 }
 
 .loader-card {
-  background: #ffffff;
-  border-radius: 32px;
-  border: 2px solid #99d6cc;  /* ✅ borde teal suave */
-  padding: 3.5rem 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
-  position: relative;
-  z-index: 1;
+    background: #ffffff;
+    border-radius: 32px;
+    border: 2px solid #99d6cc;
+    padding: 3.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    position: relative;
+    z-index: 1;
 }
 
 .loader-badge {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  color: #0d9488;       /* ✅ teal oscuro, legible */
-  text-transform: uppercase;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: #0d9488;
+    /* ✅ teal oscuro, legible */
+    text-transform: uppercase;
 }
 
 .loader-cat-wrap {
-  position: relative;
-  width: 280px;
-  height: 280px;
+    position: relative;
+    width: 280px;
+    height: 280px;
 }
 
 .loader-cat-track {
-  display: none;
+    display: none;
 }
 
 #lottie-main {
-  width: 280px;
-  height: 280px;
+    width: 280px;
+    height: 280px;
 }
 
 #lottie-corner {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 260px;
-  height: 140px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    height: 140px;
 }
 
 .loader-text {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 24px;
-  color: #134e4a;       /* ✅ teal muy oscuro, elegante */
-  font-weight: 500;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    color: #134e4a;
+    /* ✅ teal muy oscuro, elegante */
+    font-weight: 500;
 }
 
 .loader-dots span {
-  animation: dotBlink 1.4s infinite;
-  opacity: 0;
-  color: #0d9488;       /* ✅ puntos en teal */
+    animation: dotBlink 1.4s infinite;
+    opacity: 0;
+    color: #0d9488;
+    /* ✅ puntos en teal */
 }
-.loader-dots span:nth-child(1) { animation-delay: 0s; }
-.loader-dots span:nth-child(2) { animation-delay: 0.3s; }
-.loader-dots span:nth-child(3) { animation-delay: 0.6s; }
+
+.loader-dots span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader-dots span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loader-dots span:nth-child(3) {
+    animation-delay: 0.6s;
+}
 
 @keyframes dotBlink {
-  0%, 80%, 100% { opacity: 0; }
-  40%           { opacity: 1; }
+
+    0%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
 }
 
 .loader-tagline {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 14px;
-  color: #4d7c78;       /* ✅ teal medio, suave */
-  font-style: italic;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    color: #4d7c78;
+    /* ✅ teal medio, suave */
+    font-style: italic;
 }
 
-       /* =========================
+/* =========================
    ANIMACIONES DEL CARRUSEL
 ========================= */
 @keyframes scrollLeft {
-    0% { transform: translate(0); }
-    100% { transform: translate(-50%); }
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-50%);
+    }
 }
 
 @keyframes scrollRight {
-    0% { transform: translate(-50%); }
-    100% { transform: translate(0); }
+    0% {
+        transform: translate(-50%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
 
 /* =========================
@@ -120,7 +152,8 @@ body {
 
 .banner-scroll {
     height: 100%;
-    width: 7200px; /* ancho suficiente para repetir fondo */
+    width: 7200px;
+    /* ancho suficiente para repetir fondo */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -146,7 +179,7 @@ body {
 .hero-bg .overlay-carrusel {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
     z-index: 0;
 }
 
@@ -377,4 +410,3 @@ body {
     border-bottom: 2px solid #00ad3f;
     background: rgba(255, 255, 255, 0.15);
 }
-
