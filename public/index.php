@@ -18,10 +18,6 @@
     </script>
 
     <style>
-        body {
-            background: #f0faf8;
-        }
-
         #loader-overlay {
             position: fixed;
             inset: 0;
