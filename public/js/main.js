@@ -4,7 +4,7 @@ function ocultarLoader() {
   if (!overlay) return;
   overlay.classList.add('hidden');
   sessionStorage.setItem('loaderShown', 'true');
-  setTimeout(() => overlay.remove(), 3000);
+  setTimeout(() => overlay.remove(), 2000);
 }
 
 const maxTimer = setTimeout(ocultarLoader, 5000);
@@ -16,7 +16,7 @@ if (!overlay) {
   setTimeout(() => {
     clearTimeout(maxTimer);
     ocultarLoader();
-  }, 4100);
+  }, 2400);
 
   // Huellas decorativas
   const pawPositions = [
